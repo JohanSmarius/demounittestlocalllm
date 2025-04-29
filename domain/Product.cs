@@ -7,7 +7,7 @@ public class Product
     private decimal price;
     private string name;
 
-    public string Name
+    public required string Name
     {
         get => name; 
         set
