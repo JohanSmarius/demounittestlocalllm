@@ -1,3 +1,5 @@
+using CommunityToolkit.Diagnostics;
+
 public class Order
 {
     public int OrderId { get; set; }
@@ -10,6 +12,8 @@ public class Order
 
     public void AddOrderline(Orderline orderline)
     {
+        Guard.IsNotNull(orderline, nameof(orderline));
+        
         Orderlines.Add(orderline);
     }
 
